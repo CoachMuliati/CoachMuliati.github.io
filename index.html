@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coach Diet Turun Berat Badan</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons (untuk ikon sosmed) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <style>
+    /* ============================
+       1. Variabel Warna (Palet)
+       ============================ */
+    :root {
+      --color-charcoal: #1C1C1C;  /* utama (Charcoal) */
+      --color-canvas:  #EAE6E0;   /* aksen terang (Canvas) */
+      --color-slate:   #535366;   /* aksen sekunder (Slate) */
+      --color-white:   #FFFFFF;   /* teks di background gelap */
+    }
+
+    /* ============================
+       2. Reset & Body
+       ============================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-canvas);
+      color: var(--color-charcoal);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ============================
+       3. HEADER (Navbar)
+       ============================ */
+    .navbar {
+      background-color: var(--color-charcoal);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand,
+    .nav-link {
+      color: var(--color-white) !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: var(--color-slate) !important;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1); /* ikon toggler menjadi putih */
+    }
+
+    /* ============================
+       4. HERO / MAIN BANNER
+       ============================ */
+    #hero {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    }
+    #hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    #hero p.lead {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    #hero .btn-primary {
+      background-color: var(--color-slate);
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.375rem;
+      color: var(--color-white);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    #hero .btn-primary:hover {
+      background-color: #3f3f5b; /* slate yang lebih gelap */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ============================
+       5. SECTION “BENEFITS IKUT PROGRAM”
+       ============================ */
+    #benefits {
+      background-color: var(--color-canvas);
+      padding: 4rem 0;
+    }
+    #benefits h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+    }
+    .benefit-card {
+      border: none;
+      border-radius: 0.75rem;
+      background-color: var(--color-white);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .benefit-card .card-body {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .benefit-card .icon-wrapper {
+      font-size: 2.5rem;
+      color: var(--color-slate);
+      margin-bottom: 1rem;
+    }
+    .benefit-card h5 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--color-charcoal);
+    }
+    .benefit-card p {
+      color: var(--color-charcoal);
+      font-size: 0.95rem;
+    }
+
+    /* ============================
+       6. SECTION “TESTIMONIALS”
+       ============================ */
+    #testimonials {
+      background-color: var(--color-slate);
+      color: var(--color-white);
+      padding: 4rem 0;
+    }
+    #testimonials h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+    .testimonial-carousel img {
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+    }
+    .testimonial-carousel .carousel-item {
+      text-align: center;
+    }
+    .testimonial-carousel h5 {
+      font-weight: 500;
+      margin-top: 0.75rem;
+      color: var(--color-white);
+    }
+    .testimonial-carousel p {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1); /* panah putih */
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 3rem;
+      height: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* ============================
+       7. SECTION “CONTACT & SOCIAL MEDIA”
+       ============================ */
+    #contact {
+      padding: 4rem 0;
+      background-color: var(--color-canvas);
+      text-align: center;
+    }
+    #contact h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-charcoal);
+    }
+    #contact p {
+      color: var(--color-charcoal);
+      margin-bottom: 1.5rem;
+    }
+    #contact .btn-wa-contact {
+      background-color: var(--color-slate);
+      border: none;
+      color: var(--color-white);
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+      margin-bottom: 2rem;
+    }
+    #contact .btn-wa-contact:hover {
+      background-color: #3f3f5b; /* slate lebih gelap */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    #social-buttons a {
+      color: var(--color-charcoal);
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+    #social-buttons a:hover {
+      color: var(--color-slate);
+      transform: scale(1.1);
+    }
+
+    /* ============================
+       8. SECTION “COACH PROFILE” (DIPINDAH KE BAWAH)
+       ============================ */
+    #coach-profile {
+      padding: 4rem 0;
+      background-color: var(--color-canvas);
+    }
+    #coach-profile h2 {
+      margin-bottom: 2rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--color-charcoal);
+    }
+    #coach-profile .card {
+      background-color: var(--color-white);
+      border: none;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+    #coach-profile img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid var(--color-slate);
+    }
+    #coach-profile .card-title {
+      color: var(--color-charcoal);
+      font-weight: 600;
+    }
+    #coach-profile .card-text {
+      color: var(--color-charcoal);
+      margin-bottom: 1.5rem;
+    }
+    #coach-profile .btn-wa {
+      background-color: var(--color-slate);
+      border: none;
+      color: var(--color-white);
+      font-weight: 600;
+      padding: 0.5rem 1.75rem;
+      border-radius: 0.375rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    #coach-profile .btn-wa:hover {
+      background-color: #3f3f5b; /* slate yang lebih gelap */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ============================
+       9. FOOTER
+       ============================ */
+    footer {
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    footer a {
+      color: var(--color-white);
+      text-decoration: underline;
+    }
+    footer a:hover {
+      color: var(--color-slate);
+    }
+
+    /* ============================
+       10. Responsiveness Extra
+       ============================ */
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 2rem;
+      }
+      #hero p.lead {
+        font-size: 1rem;
+      }
+      .testimonial-carousel img {
+        max-height: 150px;
+      }
+      /* Benefit Card: atur margin bawah saat single column */
+      #benefits .col-md-4 {
+        margin-bottom: 2rem;
+      }
+      #coach-profile .col-md-5 {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ====== HEADER ====== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Coach Muliati</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimoni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Hubungi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO / MAIN BANNER ====== -->
+  <section id="hero">
+    <div class="container">
+      <h1>Transformasi Tubuh Sehat &amp; Bugar</h1>
+      <p class="lead">
+        Program diet terstruktur untuk membantu Anda menurunkan berat badan dengan
+        sehat dan aman.
+      </p>
+      <a href="#contact" class="btn btn-primary">Hubungi Coach</a>
+    </div>
+  </section>
+
+  <!-- ====== BENEFITS IKUT PROGRAM ====== -->
+  <section id="benefits">
+    <div class="container">
+      <h2>Benefits Ikut Program</h2>
+      <div class="row justify-content-center">
+        <!-- Benefit 1 -->
+        <div class="col-md-4">
+          <div class="card benefit-card mb-4">
+            <div class="card-body">
+              <div class="icon-wrapper">
+                <i class="bi bi-person-check-fill"></i>
+              </div>
+              <h5>Rencana Diet Personal</h5>
+              <p>
+                Mendapatkan panduan makan yang disesuaikan dengan kebutuhan
+                kalori, preferensi, dan gaya hidup Anda. Tidak sekadar angka,
+                namun cara makan yang mudah diikuti.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="col-md-4">
+          <div class="card benefit-card mb-4">
+            <div class="card-body">
+              <div class="icon-wrapper">
+                <i class="bi bi-bar-chart-line-fill"></i>
+              </div>
+              <h5>Monitoring &amp; Evaluasi</h5>
+              <p>
+                Setiap minggu ada evaluasi perkembangan berat badan dan komposisi
+                tubuh. Anda akan selalu tahu progres, plus motivasi terus dari coach.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="col-md-4">
+          <div class="card benefit-card mb-4">
+            <div class="card-body">
+              <div class="icon-wrapper">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h5>Dukungan Komunitas</h5>
+              <p>
+                Bergabung ke grup eksklusif (Telegram/WhatsApp) untuk saling
+                support, berbagi resep sehat, dan tips olahraga. Semangat bareng‐bareng!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS / CAROUSEL ====== -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>Testimoni Klien</h2>
+      <div
+        id="testimonialCarousel"
+        class="carousel slide testimonial-carousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <!-- Ganti “testimonial1.jpg” dengan path/foto testimoni sesungguhnya -->
+            <img
+              src="assets/testimoni 1.jpeg"
+              alt="Testimoni Klien 1"
+              class="d-block mx-auto"
+            />
+            <!-- <h5>Nama Klien 1</h5>
+            <p>
+              “Programnya sangat mudah diikuti, hasilnya nyata: turun 8 kg dalam
+              2 bulan! Coach‐nya selalu memotivasi &amp; memberi arahan yang
+              tepat. Recommended!”
+            </p> -->
+          </div>
+
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <img
+              src="assets/testimon 2.jpeg"
+              alt="Testimoni Klien 2"
+              class="d-block mx-auto"
+            />
+            <!-- <h5>Nama Klien 2</h5>
+            <p>
+              “Saya merasa lebih bugar, pola makan jauh lebih tertata, dan berat
+              badan turun stabil. Coach sangat peduli &amp; mendukung 100%. Terima kasih!”
+            </p> -->
+          </div>
+
+          <!-- Item 3 -->
+          <!-- <div class="carousel-item">
+            <img
+              src="testimonial3.jpg"
+              alt="Testimoni Klien 3"
+              class="d-block mx-auto"
+            />
+            <h5>Nama Klien 3</h5>
+            <p>
+              “Dengan bimbingan Coach, saya mencapai target lemak tubuh &amp;
+              rasa percaya diri. Programnya terstruktur &amp; sangat personal!”
+            </p>
+          </div> -->
+        </div>
+
+        <!-- Kontrol Prev/Next -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sebelumnya</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Berikutnya</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== COACH PROFILE (DIPINDAH KE BAWAH) ====== -->
+  <section id="coach-profile">
+    <div class="container">
+      <h2>Tentang Coach</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-5 col-lg-4">
+          <div class="card text-center">
+            <!-- Ganti “coach.jpg” dengan path/foto Coach yang sebenarnya -->
+            <img src="assets/coach.jpeg" alt="Foto Coach" class="img-fluid mx-auto d-block" />
+            <div class="card-body">
+              <h4 class="card-title">Coach Muliati</h4>
+              <p class="card-text">
+                Siap membantu Anda menciptakan gaya hidup sehat dan mencapai
+                body transformation impian.
+              </p>
+              <a
+                href="wa.link/adw65h"
+                target="_blank"
+                class="btn btn-wa"
+                rel="noopener"
+                >Chat WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT & SOCIAL MEDIA ====== -->
+  <section id="contact">
+    <div class="container">
+      <h2>Ayo Mulai Perjalanan Sehatmu!</h2>
+      <p class="mb-4">
+        Hubungi saya sekarang untuk konsultasi gratis dan mulai transformasi
+        hari ini.
+      </p>
+      <a
+        href="wa.link/adw65h"
+        target="_blank"
+        class="btn btn-wa-contact"
+        rel="noopener"
+        >Hubungi via WhatsApp</a
+      >
+
+      <div id="social-buttons" class="mt-3">
+        <!-- Ganti “#” dengan link akun sosial media yang sebenarnya -->
+        <a href="https://www.instagram.com/muliati.greatsmileclub/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <!-- <a href="https://tiktok.com/@coach" target="_blank" rel="noopener"
+          ><i class="bi bi-tiktok"></i
+        ></a> -->
+        <a href="https://www.facebook.com/muliati.muliati.79656921" target="_blank" rel="noopener"
+          ><i class="bi bi-facebook"></i
+        ></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Coach Muliati. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (Popper.js + Bootstrap JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
